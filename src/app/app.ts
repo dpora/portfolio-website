@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Hero } from './components/hero/hero';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Hero],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('portfolio-website');
-}
+export class App {}

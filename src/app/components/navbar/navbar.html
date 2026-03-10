@@ -1,0 +1,29 @@
+<header class="navbar" [class.navbar--scrolled]="scrolled()">
+  <div class="container navbar__inner">
+    <a class="navbar__logo" href="#home" (click)="scrollTo('#home')">
+      <span class="navbar__logo-bracket">&lt;</span>Dan<span class="navbar__logo-accent">Pora</span><span class="navbar__logo-bracket">/&gt;</span>
+    </a>
+
+    <nav class="navbar__links" [class.navbar__links--open]="menuOpen()">
+      @for (link of navLinks(); track link.href) {
+        <a
+          class="navbar__link"
+          [class.navbar__link--active]="activeSection() === link.href.slice(1)"
+          href="{{ link.href }}"
+          (click)="scrollTo(link.href); $event.preventDefault()">
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <button
+      class="navbar__hamburger"
+      [class.navbar__hamburger--open]="menuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

@@ -60,28 +60,28 @@ export class Portfolio {
 
   readonly experiences = signal<ExperienceItem[]>([
     {
-      role: 'Full-stack Software Engineer',
-      company: 'Akuret Solutions',
-      period: 'May 2025 — Sept 2025',
-      description: 'Returned to Akuret to lead a full-stack web transition. Rebuilt an existing .NET MAUI application into a dedicated web platform using React, Vite, TypeScript, and Tailwind CSS to meet customer requirements for a web-based solution. Alongside development, I took on a leadership role by mentoring a colleague on front-end development. On the backend, migrated frameworks to .NET 9, implemented CI/CD pipelines, and optimized SQL database queries to reduce execution time by over 98%.',
-      tags: ['React','Vite', 'TypeScript', 'Tailwind CSS', '.NET Framework', 'GitHub Actions', 'Azure DevOps', 'MS SQL Server', 'Database Optimization', 'REST API'],
-      color: 'primary',
-    },
-    {
-      role: 'Back-end Software Engineer',
-      company: 'KMD Technology Solutions, LLC',
-      period: 'Jul 2023 — May 2025',
-      description: 'Developed comprehensive project management solutions and data-driven tools to enhance workflow efficiency. Built an Angular web dashboard for managing deliverables, developed full-stack survey pages , and created an automated OCR program using Tesseract to scan purchase orders for federal compliance clauses.',
-      tags: ['Angular', 'TypeScript', 'C#', 'VB.NET', 'Tesseract OCR', 'MS SQL Server', 'HTML', 'CSS'],
-      color: 'secondary',
-    },
-    {
       role: 'Software Developer',
       company: 'Akuret Solutions',
       period: 'Aug 2021 - Jan 2023',
       description: 'Started my professional development career building internal systems and data pipelines. Engineered automated SFTP data ingestion scripts using VB.NET and SQL, developed an automated system updater for internal batches and databases, and built Android applications utilizing Kotlin Multiplatform.',
       tags: ['VB.NET', 'MS SQL Server', 'Kotlin Multiplatform', 'Android Development', 'WinSCP', 'SFTP Management'],
       color: 'accent',
+    },
+    {
+      role: 'Back-end Software Engineer',
+      company: 'KMD Technology Solutions, LLC',
+      period: 'Jul 2023 — May 2025',
+      description: 'Developed comprehensive project management solutions and data-driven tools to enhance workflow efficiency. Built an Angular web dashboard for managing deliverables, developed full-stack survey pages, and created an automated OCR program using Tesseract to scan purchase orders for federal compliance clauses.',
+      tags: ['Angular', 'TypeScript', 'C#', 'VB.NET', 'Tesseract OCR', 'MS SQL Server', 'HTML', 'CSS'],
+      color: 'secondary',
+    },
+    {
+      role: 'Full-stack Software Engineer',
+      company: 'Akuret Solutions',
+      period: 'May 2025 — Sept 2025',
+      description: 'Returned to Akuret to lead a full-stack web transition. Rebuilt an existing .NET MAUI application into a dedicated web platform using React, Vite, TypeScript, and Tailwind CSS to meet customer requirements for a web-based solution. Alongside development, I took on a leadership role by mentoring a colleague on front-end development. On the backend, migrated frameworks to .NET 9, implemented CI/CD pipelines, and optimized SQL database queries to reduce execution time by over 98%.',
+      tags: ['React','Vite', 'TypeScript', 'Tailwind CSS', '.NET Framework', 'GitHub Actions', 'Azure DevOps', 'MS SQL Server', 'Database Optimization', 'REST API'],
+      color: 'primary',
     },
   ]);
 

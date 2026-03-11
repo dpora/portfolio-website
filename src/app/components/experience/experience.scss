@@ -1,0 +1,129 @@
+.experience {
+  &__timeline-wrapper {
+    position: relative;
+  }
+
+  &__timeline-line {
+    display: none;
+    position: absolute;
+    left: 10px; /* Aligns visually with the center of the 24px dot (12px - 2px line width = 10px) */
+    top: 8px;
+    bottom: 8px;
+    width: 4px;
+    background-color: var(--color-border);
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1.5rem;
+    align-items:stretch;
+    opacity: 0;
+    transform: translateX(-20px);
+
+    &--visible {
+      animation: slideInRight 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Map colors natively onto standard properties without extra logic in TS */
+    &[data-color="primary"] { --dot-color: var(--color-primary); }
+    &[data-color="secondary"] { --dot-color: var(--color-teal); }
+    &[data-color="accent"] { --dot-color: var(--color-accent); }
+  }
+
+  &__dot-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    flex-shrink: 0;
+    z-index: 1;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__dot {
+    width: 24px;
+    height: 24px;
+    background-color: var(--dot-color, var(--color-bg));
+    border: 3px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text); /* Ensure icon inside has thick lines or proper coloring */
+  }
+
+  &__card {
+    flex: 1;
+    background-color: var(--color-bg);
+    padding: 1.5rem;
+    border: 3px solid var(--color-border);
+    box-shadow: 5px 5px var(--color-border);
+  }
+
+  &__card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__role {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__period {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background-color: rgba(0, 0, 0, 0.05); /* bg-muted */
+    padding: 0.25rem 0.5rem;
+    border: 2px solid var(--color-border); /* brutal-border */
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  &__company {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  &__description {
+    color: var(--color-text-muted);
+    line-height: 1.625;
+    margin-bottom: 1rem;
+  }
+
+  }
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+

@@ -1,7 +1,6 @@
 export interface Skill {
   name: string;
-  level: number; // 0-100
-  category: 'frontend' | 'backend' | 'tools';
+  category: 'frontend' | 'backend' | 'language' | 'tools' | 'databases';
 }
 
 export interface Project {
@@ -21,7 +20,6 @@ export interface SocialLink {
 }
 
 export interface ContactInfo {
-  email: string;
   description: string;
   socials: SocialLink[];
 }

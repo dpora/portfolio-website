@@ -50,6 +50,15 @@ export class Navbar implements OnInit {
 
   private updateActiveSection(): void {
     const sections = this.navLinks().map(l => l.href.replace('#', ''));
+    
+    // Check if user reached the bottom of the page
+    if (window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight - 10) {
+      if (sections.length > 0) {
+        this.activeSection.set(sections[sections.length - 1]);
+        return;
+      }
+    }
+
     for (const id of [...sections].reverse()) {
       const el = document.getElementById(id);
       if (el && window.scrollY >= el.offsetTop - 120) {

@@ -6,16 +6,6 @@
   overflow: hidden;
   padding-top: var(--navbar-height);
 
-  /* ---- Content ---- */
-  &__content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin-left: 50px;
-    margin-right: auto;
-    text-align: left;
-  }
-
   &__greeting {
     display: inline-flex;
     align-items: center;

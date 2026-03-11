@@ -40,8 +40,21 @@
           <h3 class="skills-heading brutal-border bg-secondary">
             Tech Stack
           </h3>
+
+          <div class="skills-filter">
+            @for (cat of categories(); track cat) {
+              <button 
+                class="filter-btn brutal-border" 
+                [class.bg-secondary]="selectedCategory() === cat"
+                [class.bg-background]="selectedCategory() !== cat"
+                (click)="selectedCategory.set(cat)">
+                {{ cat }}
+              </button>
+            }
+          </div>
+
           <div class="skills-grid">
-            @for (skill of skills(); track skill.name; let i = $index) {
+            @for (skill of filteredSkills(); track skill.name; let i = $index) {
               <span 
                 class="skill-badge brutal-border brutal-shadow bg-background" 
                 [class.skill-badge--visible]="isVisible()"

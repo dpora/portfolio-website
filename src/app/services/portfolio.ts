@@ -18,26 +18,44 @@ export class Portfolio {
     title: 'About',
     subtitle: 'Me',
     paragraphs: [
-      "I'm a software engineer with a passion for crafting elegant solutions to complex problems. I love working across the full stack, from pixel-perfect UIs to robust backend systems.",
-      "When I'm not coding, you'll find me exploring new technologies, contributing to open source, or perfecting my espresso technique."
+      "I'm a software engineer passionate about modernizing systems and crafting elegant solutions from end to end. With a strong foundation in full-stack development, I enjoy working across the entire stack, from building responsive UIs with React to optimizing SQL databases. ",
+      "Outside of my day-to-day work, I'm usually working on my '99 Miata, hitting the rock climbing gym, or experimenting with 3D modeling."
     ],
     traits: [
-      { icon: 'terminal', label: "Full Stack" },
-      { icon: 'code2', label: "Open Source" },
-      { icon: 'coffee', label: "Caffeine Powered" },
-      { icon: 'gamepad2', label: "Problem Solver" },
+      { icon: 'terminal', label: "Full Stack Engineer" },
+      { icon: 'code2', label: "Clean Code Enthusiast" },
+      { icon: 'code2', label: "Lifelong Learner" },
+      { icon: 'coffee', label: "Car Nut" },
+      { icon: 'gamepad2', label: "Rock Climber" },
     ]
   });
 
   readonly skills = signal<Skill[]>([
-    { name: 'TypeScript', level: 90, category: 'frontend' },
-    { name: 'React', level: 85, category: 'frontend' },
-    { name: 'Node.js', level: 80, category: 'backend' },
-    { name: 'Python', level: 75, category: 'backend' },
-    { name: 'PostgreSQL', level: 70, category: 'backend' },
-    { name: 'Docker', level: 65, category: 'tools' },
-    { name: 'AWS', level: 60, category: 'tools' },
-    { name: 'Git', level: 90, category: 'tools' },
+    { name: 'TypeScript', category: 'language' },
+    { name: 'JavaScript', category: 'language' },
+    { name: 'C#', category: 'language' },
+    { name: 'VB.Net', category: 'language' },
+    { name: 'Java', category: 'language' },
+
+    { name: 'React', category: 'frontend' },
+    { name: 'Angular', category: 'frontend' },
+    { name: 'Blazor', category: 'frontend' },
+
+    { name: 'Express.js', category: 'backend' },
+    { name: 'ASP.NET Core', category: 'backend' },
+    { name: 'Spring Boot', category: 'backend' },
+
+    { name: 'MS SQL Server', category: 'databases' },
+    { name: 'SQLite', category: 'databases' },
+
+    { name: 'Visual Studio', category: 'tools' },
+    { name: 'Visual Studio Code', category: 'tools' },
+    { name: 'Docker', category: 'tools' },
+    { name: 'Azure', category: 'tools' },
+    { name: 'Sentry', category: 'tools' },
+    { name: 'Swagger', category: 'tools' },
+    { name: 'SSMS', category: 'tools' },
+    { name: 'Github Actions', category: 'tools' },
   ]);
 
   readonly experiences = signal<ExperienceItem[]>([
@@ -45,74 +63,72 @@ export class Portfolio {
       role: 'Full-stack Software Engineer',
       company: 'Akuret Solutions',
       period: 'May 2025 — Sept 2025',
-      description: 'Leading frontend architecture for the core product platform. Building design systems, optimizing performance, and mentoring junior engineers.',
-      tags: ['React', 'TypeScript', 'System Design'],
+      description: 'Returned to Akuret to lead a full-stack web transition. Rebuilt an existing .NET MAUI application into a dedicated web platform using React, Vite, TypeScript, and Tailwind CSS to meet customer requirements for a web-based solution. Alongside development, I took on a leadership role by mentoring a colleague on front-end development. On the backend, migrated frameworks to .NET 9, implemented CI/CD pipelines, and optimized SQL database queries to reduce execution time by over 98%.',
+      tags: ['React','Vite', 'TypeScript', 'Tailwind CSS', '.NET Framework', 'GitHub Actions', 'Azure DevOps', 'MS SQL Server', 'Database Optimization', 'REST API'],
       color: 'primary',
     },
     {
       role: 'Back-end Software Engineer',
       company: 'KMD Technology Solutions, LLC',
       period: 'Jul 2023 — May 2025',
-      description: 'Full-stack development on a high-traffic SaaS product. Shipped features end-to-end from database schema to polished UI.',
-      tags: ['Node.js', 'PostgreSQL', 'React'],
+      description: 'Developed comprehensive project management solutions and data-driven tools to enhance workflow efficiency. Built an Angular web dashboard for managing deliverables, developed full-stack survey pages , and created an automated OCR program using Tesseract to scan purchase orders for federal compliance clauses.',
+      tags: ['Angular', 'TypeScript', 'C#', 'VB.NET', 'Tesseract OCR', 'MS SQL Server', 'HTML', 'CSS'],
       color: 'secondary',
     },
     {
       role: 'Software Developer',
       company: 'Akuret Solutions',
       period: 'Aug 2021 - Jan 2023',
-      description: 'Built responsive web applications for diverse clients. Collaborated closely with designers to deliver pixel-perfect interfaces.',
-      tags: ['Visual Basic', '.NET', 'Microsoft SQL Server', 'WinSCP', 'SFTP Management'],
+      description: 'Started my professional development career building internal systems and data pipelines. Engineered automated SFTP data ingestion scripts using VB.NET and SQL, developed an automated system updater for internal batches and databases, and built Android applications utilizing Kotlin Multiplatform.',
+      tags: ['VB.NET', 'MS SQL Server', 'Kotlin Multiplatform', 'Android Development', 'WinSCP', 'SFTP Management'],
       color: 'accent',
     },
   ]);
 
   readonly projects = signal<Project[]>([
     {
-      title: "Cloud Dashboard",
+      title: "What The Dob",
       description:
-        "A real-time monitoring dashboard for cloud infrastructure with live metrics, alerts, and team collaboration.",
-      tags: ["React", "TypeScript", "WebSocket", "D3.js"],
+        "Blazor Server web app for browsing Penn State dining hall menus and rating their dishes. Data is scraped from the public PSU menu page, stored in SQLite via EF Core, and exposed through a single-page experience with anonymous session-based ratings.",
+      tags: ["ASP.NET Core", "Blazor", "SQLite", "EF Core", "HTMLAgilityPack", "Clean Architecture"],
       color: "primary",
-      github: "#",
+      github: "https://github.com/dpora/WhatTheDob",
       live: "#",
     },
     {
-      title: "CLI Task Runner",
+      title: "Salvage Search",
       description:
         "A blazing-fast CLI tool for orchestrating build pipelines and automating repetitive dev workflows.",
       tags: ["Rust", "CLI", "YAML", "CI/CD"],
       color: "secondary",
       github: "#",
     },
-    {
-      title: "Auth Microservice",
-      description:
-        "A secure, scalable authentication service with OAuth2, JWT tokens, and role-based access control.",
-      tags: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-      color: "accent",
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Design System",
-      description:
-        "A comprehensive component library with accessibility-first design, theming support, and documentation.",
-      tags: ["React", "Storybook", "CSS-in-JS", "A11y"],
-      color: "primary",
-      github: "#",
-      live: "#",
-    },
+    // {
+    //   title: "Auth Microservice",
+    //   description:
+    //     "A secure, scalable authentication service with OAuth2, JWT tokens, and role-based access control.",
+    //   tags: ["Node.js", "PostgreSQL", "Redis", "Docker"],
+    //   color: "accent",
+    //   github: "#",
+    //   live: "#",
+    // },
+    // {
+    //   title: "Design System",
+    //   description:
+    //     "A comprehensive component library with accessibility-first design, theming support, and documentation.",
+    //   tags: ["React", "Storybook", "CSS-in-JS", "A11y"],
+    //   color: "primary",
+    //   github: "#",
+    //   live: "#",
+    // },
   ]);
 
   readonly contactInfo = signal<ContactInfo>({
-    email: 'hello@example.com',
     description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of something awesome. Drop me a line!",
     socials: [
-      { icon: 'github', label: 'GitHub', href: '#', handle: '@yourusername' },
-      { icon: 'linkedin', label: 'LinkedIn', href: '#', handle: '/in/yourusername' },
-      { icon: 'twitter', label: 'Twitter', href: '#', handle: '@yourusername' },
-      { icon: 'mail', label: 'Email', href: 'mailto:hello@example.com', handle: 'hello@example.com' },
+      { icon: 'github', label: 'GitHub', href: 'https://danpora.dev/link/github', handle: '@dpora' },
+      { icon: 'linkedin', label: 'LinkedIn', href: 'https://danpora.dev/link/linkedin', handle: '/in/daniel-pora' },
+      { icon: 'mail', label: 'Email', href: 'mailto:136dpora@gmail.com', handle: '136dpora@gmail.com' },
     ]
   });
 }

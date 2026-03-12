@@ -1,0 +1,23 @@
+<figure class="polaroid" aria-hidden="true">
+  <div #container class="face polaroid__frame">
+    <img
+      class="face__eyes"
+      ngSrc="face/EyeAscii.png"
+      width="765"
+      height="953"
+      alt=""
+      aria-hidden="true"
+      [style.transform]="eyeTransform()"
+    />
+    <img
+      class="face__mask"
+      ngSrc="face/FaceAscii.png"
+      width="765"
+      height="953"
+      alt=""
+      aria-hidden="true"
+      priority
+    />
+  </div>
+  <figcaption class="polaroid__caption">:)</figcaption>
+</figure>

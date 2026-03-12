@@ -1,6 +1,11 @@
 export interface Skill {
   name: string;
-  category: 'frontend' | 'backend' | 'language' | 'tools' | 'databases';
+  category: 'front-end' | 'back-end' | 'language' | 'tools' | 'databases';
+}
+
+export interface ProjectRepository {
+  label: string;
+  url: string;
 }
 
 export interface Project {
@@ -8,7 +13,7 @@ export interface Project {
   description: string;
   tags: string[];
   color: 'primary' | 'secondary' | 'accent' | string;
-  github?: string;
+  github?: ProjectRepository[];
   live?: string;
 }
 

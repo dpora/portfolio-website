@@ -37,13 +37,13 @@ export class Portfolio {
     { name: 'VB.Net', category: 'language' },
     { name: 'Java', category: 'language' },
 
-    { name: 'React', category: 'frontend' },
-    { name: 'Angular', category: 'frontend' },
-    { name: 'Blazor', category: 'frontend' },
+    { name: 'React', category: 'front-end' },
+    { name: 'Angular', category: 'front-end' },
+    { name: 'Blazor', category: 'front-end' },
 
-    { name: 'Express.js', category: 'backend' },
-    { name: 'ASP.NET Core', category: 'backend' },
-    { name: 'Spring Boot', category: 'backend' },
+    { name: 'Express.js', category: 'back-end' },
+    { name: 'ASP.NET Core', category: 'back-end' },
+    { name: 'Spring Boot', category: 'back-end' },
 
     { name: 'MS SQL Server', category: 'databases' },
     { name: 'SQLite', category: 'databases' },
@@ -79,7 +79,7 @@ export class Portfolio {
       role: 'Full-stack Software Engineer',
       company: 'Akuret Solutions',
       period: 'May 2025 — Sept 2025',
-      description: 'Returned to Akuret to lead a full-stack web transition. Rebuilt an existing .NET MAUI application into a dedicated web platform using React, Vite, TypeScript, and Tailwind CSS to meet customer requirements for a web-based solution. Alongside development, I took on a leadership role by mentoring a colleague on front-end development. On the backend, migrated frameworks to .NET 9, implemented CI/CD pipelines, and optimized SQL database queries to reduce execution time by over 98%.',
+      description: 'Returned to Akuret to lead a full-stack web transition. Rebuilt an existing .NET MAUI application into a dedicated web platform using React, Vite, TypeScript, and Tailwind CSS to meet customer requirements for a web-based solution. Alongside development, I took on a leadership role by mentoring a colleague on front-end development. On the back-end, migrated frameworks to .NET 9, implemented CI/CD pipelines, and optimized SQL database queries to reduce execution time by over 98%.',
       tags: ['React','Vite', 'TypeScript', 'Tailwind CSS', '.NET Framework', 'GitHub Actions', 'Azure DevOps', 'MS SQL Server', 'Database Optimization', 'REST API'],
       color: 'primary',
     },
@@ -90,37 +90,22 @@ export class Portfolio {
       title: "What The Dob",
       description:
         "Blazor Server web app for browsing Penn State dining hall menus and rating their dishes. Data is scraped from the public PSU menu page, stored in SQLite via EF Core, and exposed through a single-page experience with anonymous session-based ratings.",
-      tags: ["ASP.NET Core", "Blazor", "SQLite", "EF Core", "HTMLAgilityPack", "Clean Architecture"],
+      tags: ["C#","ASP.NET Core", "Blazor", "SQLite", "EF Core", "HTMLAgilityPack", "Clean Architecture"],
       color: "primary",
-      github: "https://github.com/dpora/WhatTheDob",
+      github: [{url: "https://github.com/dpora/WhatTheDob", label: "Source Code"}],
       live: "#",
     },
     {
       title: "Salvage Search",
       description:
-        "A blazing-fast CLI tool for orchestrating build pipelines and automating repetitive dev workflows.",
-      tags: ["Rust", "CLI", "YAML", "CI/CD"],
+        "An auto parts and vehicle salvage marketplace that connects buyers with salvage businesses. Built with a React front-end and Express.js back-end, it also uses MS SQL Server for data storage and features built in authentication using JWT.",
+      tags: ["JavaScript", "React", "Express.js", "MS SQL Server", "Swagger", "REST API", "JWT", "CI/CD"],
       color: "secondary",
-      github: "#",
+      github: [
+        {url: "https://github.com/Sweng465/WebServicesFront", label: "Front-end"},
+        {url: "https://github.com/Sweng465/WebServicesBack", label: "Back-end"},
+      ],
     },
-    // {
-    //   title: "Auth Microservice",
-    //   description:
-    //     "A secure, scalable authentication service with OAuth2, JWT tokens, and role-based access control.",
-    //   tags: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-    //   color: "accent",
-    //   github: "#",
-    //   live: "#",
-    // },
-    // {
-    //   title: "Design System",
-    //   description:
-    //     "A comprehensive component library with accessibility-first design, theming support, and documentation.",
-    //   tags: ["React", "Storybook", "CSS-in-JS", "A11y"],
-    //   color: "primary",
-    //   github: "#",
-    //   live: "#",
-    // },
   ]);
 
   readonly contactInfo = signal<ContactInfo>({

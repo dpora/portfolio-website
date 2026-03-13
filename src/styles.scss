@@ -6,6 +6,7 @@
 /* ---------- CSS Custom Properties (Design Tokens) -------- */
 :root {
   --color-bg:           #faf4dd;
+  --color-bg-secondary: #fffdf7;
   --color-surface:      #1e293b;
   --color-surface-alt:  #0f172a;
   --color-border:       #000000;
@@ -17,8 +18,8 @@
   --color-indigo-dark:  #4f46e5;
   --color-teal:         #19b4b9;
   --color-orange:       #ff8833;
-  --color-pink:         #ef5d8d;
-  /* Add more colors easily down here! e.g., --color-yellow: #eab308; */
+  --color-pink:         #f385aa;
+  --color-yellow:       #ffd91a;
   
   /* --- Semantic / Thematic Role Assignments --- */
   --color-primary:      var(--color-indigo);

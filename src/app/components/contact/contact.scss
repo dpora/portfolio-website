@@ -45,7 +45,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg-secondary);
     border: 3px solid var(--color-border);
     text-decoration: none;
     color: inherit;
@@ -55,7 +55,8 @@
       transform: translateX(4px);
 
       .contact__icon-wrapper {
-        background-color: var(--color-primary);
+        background-color: var(--color, var(--color-primary));
+        color: var(--color-primary-bright);
       }
     }
   }
@@ -68,6 +69,7 @@
     justify-content: center;
     background-color: var(--color-bg);
     border: 3px solid var(--color-border);
+    color: var(--color, var(--color-text));
     transition: background-color 0.2s ease;
   }
 

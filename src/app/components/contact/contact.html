@@ -15,8 +15,8 @@
         </div>
 
         <div class="contact__socials">
-          @for (social of contactInfo().socials; track social.label; let i = $index) {
-            <a [href]="social.href" class="contact__card brutal-card group">
+          @for (social of socialLinks(); track social.label; let i = $index) {
+            <a [href]="social.href" class="contact__card brutal-card group" [style.--color]="social.color">
               <div class="contact__icon-wrapper brutal-border group-hover-color">
                 @switch (social.icon) {
                   @case ('github') {

@@ -23,10 +23,10 @@ export class Portfolio {
     ],
     traits: [
       { icon: 'terminal', label: "Full Stack Engineer" },
-      { icon: 'code2', label: "Clean Code Enthusiast" },
+      { icon: 'gamepad2', label: "Problem Solver" },
       { icon: 'code2', label: "Lifelong Learner" },
-      { icon: 'coffee', label: "Car Nut" },
-      { icon: 'gamepad2', label: "Rock Climber" },
+      { icon: 'car', label: "Car Nut" },
+      { icon: 'climb', label: "Rock Climber" },
     ]
   });
 

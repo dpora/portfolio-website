@@ -37,7 +37,7 @@
     /* Map colors natively onto standard properties without extra logic in TS */
     &[data-color="primary"] { --dot-color: var(--color-primary); }
     &[data-color="secondary"] { --dot-color: var(--color-teal); }
-    &[data-color="accent"] { --dot-color: var(--color-accent); }
+    &[data-color="accent"] { --dot-color: var(--color-blue); }
   }
 
   &__dot-container {

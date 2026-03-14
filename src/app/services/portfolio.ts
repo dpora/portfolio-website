@@ -64,7 +64,7 @@ export class Portfolio {
       company: 'Akuret Solutions',
       period: 'Aug 2021 - Jan 2023',
       description: 'Started my professional development career building internal systems and data pipelines. Engineered automated SFTP data ingestion scripts using VB.NET and SQL, developed an automated system updater for internal batches and databases, and built Android applications utilizing Kotlin Multiplatform.',
-      tags: ['VB.NET', 'MS SQL Server', 'Kotlin Multiplatform', 'Android Development', 'WinSCP', 'SFTP Management'],
+      tags: ['VB.NET', 'MS SQL Server', 'Kotlin Multiplatform', 'Android Development', 'SFTP Management'],
       color: 'accent',
     },
     {
@@ -72,7 +72,7 @@ export class Portfolio {
       company: 'KMD Technology Solutions, LLC',
       period: 'Jul 2023 — May 2025',
       description: 'Developed comprehensive project management solutions and data-driven tools to enhance workflow efficiency. Built an Angular web dashboard for managing deliverables, developed full-stack survey pages, and created an automated OCR program using Tesseract to scan purchase orders for federal compliance clauses.',
-      tags: ['Angular', 'TypeScript', 'C#', 'VB.NET', 'Tesseract OCR', 'MS SQL Server', 'HTML', 'CSS'],
+      tags: ['Angular', 'TypeScript', 'C#', 'VB.NET', 'MS SQL Server', 'HTML', 'CSS'],
       color: 'secondary',
     },
     {

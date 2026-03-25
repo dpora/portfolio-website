@@ -1,0 +1,3 @@
+# Explicit Pages output directory for a static Angular SPA build.
+# This avoids Wrangler Angular auto-config trying to patch SSR settings.
+pages_build_output_dir = "dist/portfolio-website/browser"

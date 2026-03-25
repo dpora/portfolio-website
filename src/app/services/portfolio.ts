@@ -93,7 +93,7 @@ export class Portfolio {
       tags: ["C#","ASP.NET Core", "Blazor", "SQLite", "EF Core", "HTMLAgilityPack", "Clean Architecture"],
       color: "primary",
       github: [{url: "https://github.com/dpora/WhatTheDob", label: "Source Code"}],
-      live: "#",
+      // live: "#",
     },
     {
       title: "Salvage Search",

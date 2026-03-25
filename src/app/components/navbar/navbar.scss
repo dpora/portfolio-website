@@ -7,7 +7,7 @@
   transition: background var(--transition), box-shadow var(--transition);
 
   &--scrolled {
-    border: 3px solid var(--color-border);
+    border-bottom: 3px solid var(--color-border);
     background-color: var(--color-bg);
   }
 
